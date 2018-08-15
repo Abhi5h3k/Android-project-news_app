@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -17,8 +18,8 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
     private String url[];
     private Context context;
 
-    public  AdapterRecyclerView(Context context,String list[]){
-        this.context=context;
+    public AdapterRecyclerView(Context context, String list[]) {
+        this.context = context;
         this.url = list;
 
     }
@@ -34,14 +35,23 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
 
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
-        String address= url[position];
+        String address = url[position];
         holder.tv.setText(url[position]);
         Glide.with(context).load(address).into(holder.img);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "clicked", Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return url.length;    }
+        return url.length;
+    }
 
     public static class Holder extends RecyclerView.ViewHolder {
 
@@ -50,8 +60,8 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
 
         public Holder(View itemView) {
             super(itemView);
-            img = (ImageView) itemView.findViewById(R.id.imgID);
-            tv = (TextView) itemView.findViewById(R.id.textID);
+            img = itemView.findViewById(R.id.imgID);
+            tv = itemView.findViewById(R.id.textID);
         }
     }
 }
