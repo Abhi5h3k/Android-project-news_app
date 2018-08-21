@@ -14,12 +14,31 @@
         android:src="@drawable/news_icon_abhi" />
 
     <ImageView
+        android:id="@+id/logo_name"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/logo"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         android:contentDescription="Devloper"
         android:src="@drawable/abhishek" />
+
+    <TextView
+        android:id="@+id/poweredBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_name"
+        android:layout_centerInParent="true"
+        android:text="supercharged by NewsAPI.org"
+        android:textColor="#FFAB40" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+
+        android:layout_below="@+id/logo_name"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/poweredBy"
+        android:src="@drawable/heart" />
 
 
 </RelativeLayout>

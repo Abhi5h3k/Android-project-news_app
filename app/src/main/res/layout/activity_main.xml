@@ -18,14 +18,14 @@
             android:background="@color/colorPrimary"
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
             app:subtitleTextColor="@color/colorAccent"
-            app:title="Abhishek test" />
+            app:title="Abhishek News App" />
 
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerID"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:padding="10dp" />
 
 
