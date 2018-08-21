@@ -3,7 +3,7 @@
     package="com.news.abhishek.newsapp">
 
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"

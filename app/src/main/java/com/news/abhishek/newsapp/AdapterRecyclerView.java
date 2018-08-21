@@ -15,12 +15,12 @@ import com.bumptech.glide.Glide;
 
 public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerView.Holder> {
 
-    private String url[];
+    //private String url[];
     private Context context;
 
-    public AdapterRecyclerView(Context context, String list[]) {
+    public AdapterRecyclerView(Context context) {
         this.context = context;
-        this.url = list;
+        // this.url = list;
 
     }
 
@@ -35,14 +35,15 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
 
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
-        String address = url[position];
-        holder.tv.setText(url[position]);
-        Glide.with(context).load(address).into(holder.img);
+
+        holder.titleView.setText(SplashScreen.newsList.get(position).getNewsTitle());
+        holder.detailsView.setText(SplashScreen.newsList.get(position).getNewsDetail());
+        Glide.with(context).load(SplashScreen.newsList.get(position).getNewsImageUrl()).into(holder.imgView);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "clicked :" + v.getId(), Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -50,18 +51,20 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
 
     @Override
     public int getItemCount() {
-        return url.length;
+        return SplashScreen.newsList.size();
     }
 
     public static class Holder extends RecyclerView.ViewHolder {
 
-        ImageView img;
-        TextView tv;
+        ImageView imgView;
+        TextView titleView;
+        TextView detailsView;
 
         public Holder(View itemView) {
             super(itemView);
-            img = itemView.findViewById(R.id.imgID);
-            tv = itemView.findViewById(R.id.textID);
+            imgView = itemView.findViewById(R.id.imgID);
+            titleView = itemView.findViewById(R.id.titleTextViewID);
+            detailsView = itemView.findViewById(R.id.detailsTextViewID);
         }
     }
 }
