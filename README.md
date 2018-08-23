@@ -9,7 +9,7 @@ This is a News app  that uses [volley](https://github.com/google/volley), [glide
 
 Volley is an HTTP library that makes networking for Android apps easier and most importantly, faster.
 
-##[About Glide](https://bumptech.github.io/glide/)
+## [About Glide](https://bumptech.github.io/glide/)
 Glide is a fast and efficient image loading library for Android focused on smooth scrolling. Glide offers an easy to use API, 
 a performant and extensible resource decoding pipeline and automatic resource pooling.
 
