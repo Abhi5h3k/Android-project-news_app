@@ -1,9 +1,13 @@
-# 🔥Android News App🔥
+# 🔥Android News App🔥  
+
+ [![Abhishek LinkedIn](https://img.shields.io/badge/Abhishek-LinkedIn-blue.svg?style=for-the-badge)](https://www.linkedin.com/in/abhishek-bhardwaj-b16764166) [![Abhishek StackOverflow](https://img.shields.io/badge/Abhishek-StackOverflow-orange.svg?style=for-the-badge)](https://stackoverflow.com/users/6870223/abhi?tab=profile)
+
+
 
 This is a News app  that uses [volley](https://github.com/google/volley), [glide](https://github.com/bumptech/glide) and powered by [News API](https://newsapi.org/)
 .Project is made using Android Studio.
 
-## [Volley overview](https://developer.android.com/training/volley/)
+## [Volley overview](https://developer.android.com/training/volley/) 
 
 Volley is an HTTP library that makes networking for Android apps easier and most importantly, faster.
 
