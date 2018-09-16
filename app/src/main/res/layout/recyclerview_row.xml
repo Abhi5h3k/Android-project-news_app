@@ -52,12 +52,15 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="share"
                 android:text="SHARE"
                 android:theme="@style/PrimaryFlatButton" />
 
             <Button
+                android:id="@+id/exploreButtonId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="explore"
                 android:text="EXPLORE"
                 android:theme="@style/PrimaryFlatButton" />
         </LinearLayout>

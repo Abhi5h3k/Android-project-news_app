@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -64,11 +65,15 @@ public class SplashScreen extends AppCompatActivity {
                         String imtUrl = newsDetail.getString("urlToImage");
                         String title = newsDetail.getString("title");
                         String detail = newsDetail.getString("description");
+                        String newsUrl = newsDetail.getString("url");
+                        String content = newsDetail.getString("content");
 
 
                         news.setNewsImageUrl(imtUrl);
                         news.setNewsTitle(title);
                         news.setNewsDetail(detail);
+                        news.setNewsUrl(newsUrl);
+                        news.setContent(content);
                         newsList.add(news);
 
 

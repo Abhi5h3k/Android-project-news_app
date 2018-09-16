@@ -5,6 +5,24 @@ public class news_Objects {
     private String newsTitle;
     private String newsImageUrl;
     private String newsDetail;
+    private String newsUrl;
+    private String content;
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getNewsUrl() {
+        return newsUrl;
+    }
+
+    public void setNewsUrl(String newsUrl) {
+        this.newsUrl = newsUrl;
+    }
 
     public String getNewsTitle() {
         return newsTitle;
