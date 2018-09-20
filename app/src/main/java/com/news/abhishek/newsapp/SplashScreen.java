@@ -35,15 +35,7 @@ public class SplashScreen extends AppCompatActivity {
         jsonParse();
 
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent loadMainActivity = new Intent(SplashScreen.this, MainActivity.class);
-                startActivity(loadMainActivity);
-                finish();
-            }
-        }, 2500);
+
 
     }
 
@@ -81,6 +73,19 @@ public class SplashScreen extends AppCompatActivity {
                         //Toast.makeText(getApplicationContext(),SplashScreen.newsList.size(),Toast.LENGTH_SHORT).show();
 
                     }
+
+                   /* Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                        }
+                    }, 2500);*/
+
+                   //added here so that is loads after everything is loaded json
+                    Intent loadMainActivity = new Intent(SplashScreen.this, MainActivity.class);
+                    startActivity(loadMainActivity);
+                    finish();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
