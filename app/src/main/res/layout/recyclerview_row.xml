@@ -50,9 +50,10 @@
             android:layout_height="wrap_content">
 
             <Button
+
+                android:id="@+id/shareButtonId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="share"
                 android:text="SHARE"
                 android:theme="@style/PrimaryFlatButton" />
 
@@ -60,9 +61,13 @@
                 android:id="@+id/exploreButtonId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="explore"
                 android:text="EXPLORE"
                 android:theme="@style/PrimaryFlatButton" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                android:id="@+id/hiddenUrl"/>
         </LinearLayout>
     </LinearLayout>
 </android.support.v7.widget.CardView>

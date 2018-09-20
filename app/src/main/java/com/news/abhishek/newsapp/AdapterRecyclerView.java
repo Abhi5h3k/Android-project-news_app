@@ -11,20 +11,18 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
 public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerView.Holder> {
-     //private String url[];
+    //private String url[];
     private Context context;
-    public static int explorePosition;
+
     public AdapterRecyclerView(Context context) {
         this.context = context;
         // this.url = list;
 
     }
-
 
 
     @NonNull
@@ -36,17 +34,40 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Holder holder, final int position) {
+    public void onBindViewHolder(@NonNull final Holder holder, final int position) {
 
         holder.titleView.setText(SplashScreen.newsList.get(position).getNewsTitle());
         holder.detailsView.setText(SplashScreen.newsList.get(position).getNewsDetail());
         Glide.with(context).load(SplashScreen.newsList.get(position).getNewsImageUrl()).into(holder.imgView);
 
-         holder.itemView.setOnClickListener(new View.OnClickListener() {
+        //holder.hiddenUrl.setText(SplashScreen.newsList.get(position).getNewsUrl());
+
+        holder.explore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(v.getId() == R.id.exploreButtonId)
-                explorePosition= position;
+                Intent myIntent = new Intent(v.getContext(), newsExplore.class);
+                myIntent.putExtra("newsUrl", SplashScreen.newsList.get(position).getNewsUrl());
+                v.getContext().startActivity(myIntent);
+            }
+        });
+
+        holder.share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                String shareBody = "This news is shared using Abhishek News app :: " + "\n\n" + SplashScreen.newsList.get(position).getNewsUrl() + "\n\n Follw him on GitHub : Abhi5h3k";
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                v.getContext().startActivity(Intent.createChooser(sharingIntent, "Share via"));
+            }
+        });
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
             }
         });
     }
@@ -61,19 +82,22 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
         ImageView imgView;
         TextView titleView;
         TextView detailsView;
+        TextView hiddenUrl;
         Button explore;
+        Button share;
 
         public Holder(View itemView) {
             super(itemView);
             imgView = itemView.findViewById(R.id.imgID);
             titleView = itemView.findViewById(R.id.titleTextViewID);
             detailsView = itemView.findViewById(R.id.detailsTextViewID);
-            explore=itemView.findViewById(R.id.exploreButtonId);
+            explore = itemView.findViewById(R.id.exploreButtonId);
+            share = itemView.findViewById(R.id.shareButtonId);
+            hiddenUrl = itemView.findViewById(R.id.hiddenUrl);
+
 
         }
     }
-
-
 
 
 }

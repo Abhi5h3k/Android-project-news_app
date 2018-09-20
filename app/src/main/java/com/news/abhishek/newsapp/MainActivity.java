@@ -13,12 +13,10 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.Serializable;
-
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends AppCompatActivity {
 
 
     //data
@@ -106,19 +104,19 @@ public class MainActivity extends AppCompatActivity  {
     }
 
 
-    public void explore(View v){
-        Intent intent = new Intent(this, newsExplore.class);
+    public void explore(View v) {
+        //Intent intent = new Intent(this, newsExplore.class);
 
       /*  intent.putExtra("title",SplashScreen.newsList.get(AdapterRecyclerView.explorePosition).getNewsTitle());
         intent.putExtra("content",SplashScreen.newsList.get(AdapterRecyclerView.explorePosition).getContent());
         intent.putExtra("url",SplashScreen.newsList.get(AdapterRecyclerView.explorePosition).getNewsImageUrl());*/
-        intent.putExtra("newsUrl",SplashScreen.newsList.get(AdapterRecyclerView.explorePosition).getNewsUrl());
 
-        // Toast.makeText(getApplicationContext(),"hello", Toast.LENGTH_SHORT).show();
-        startActivity(intent);
+        //intent.putExtra("newsUrl", t.getText());
+
+      //  startActivity(intent);
     }
 
-    public void share(View v){
+  /*  public void share(View v){
 
         Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
@@ -127,7 +125,7 @@ public class MainActivity extends AppCompatActivity  {
         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
         startActivity(Intent.createChooser(sharingIntent, "Share via"));
 
-    }
+    }*/
 }
 
 
