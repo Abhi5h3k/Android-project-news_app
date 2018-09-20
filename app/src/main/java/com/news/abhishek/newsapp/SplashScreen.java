@@ -2,9 +2,7 @@ package com.news.abhishek.newsapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -33,8 +31,6 @@ public class SplashScreen extends AppCompatActivity {
 
         rq = Volley.newRequestQueue(this);
         jsonParse();
-
-
 
 
     }
@@ -69,20 +65,10 @@ public class SplashScreen extends AppCompatActivity {
                         newsList.add(news);
 
 
-                        //Toast.makeText(getApplicationContext(),"added : "+ title,Toast.LENGTH_SHORT).show();
-                        //Toast.makeText(getApplicationContext(),SplashScreen.newsList.size(),Toast.LENGTH_SHORT).show();
-
                     }
 
-                   /* Handler handler = new Handler();
-                    handler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
 
-                        }
-                    }, 2500);*/
-
-                   //added here so that is loads after everything is loaded json
+                    //added here so that is loads after everything is loaded json
                     Intent loadMainActivity = new Intent(SplashScreen.this, MainActivity.class);
                     startActivity(loadMainActivity);
                     finish();

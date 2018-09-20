@@ -3,28 +3,20 @@
     <group android:checkableBehavior="single">
 
         <item
-            android:icon="@mipmap/ic_launcher"
-            android:title="my 1" />
-    </group>
-    <group>
+            android:id="@+id/aboutApp"
+            android:icon="@drawable/about"
+            android:title="About app" />
         <item
-            android:icon="@mipmap/ic_launcher"
-            android:title="my 2" />
-        <item
-            android:icon="@mipmap/ic_launcher"
-            android:title="my 3" />
-        <item
-            android:icon="@mipmap/ic_launcher"
-            android:title="my 4" />
-    </group>
-    <group>
-        <item
-            android:icon="@mipmap/ic_launcher"
-            android:title="my 5" />
-        <item
-            android:icon="@mipmap/ic_launcher"
-            android:title="my 6" />
+            android:id="@+id/aboutDev"
 
+            android:icon="@drawable/dev"
+            android:title="Devloper" />
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/share"
+            android:title="Share" />
 
     </group>
+
+
 </menu>

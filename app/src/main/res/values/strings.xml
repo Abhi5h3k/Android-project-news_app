@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">News app</string>
+    <string name="aboutDevText">Hello World!! :D\n
+         \nYou can Find me on GitHub, LinkedIn and StackOverflow.
+         \nDo check my other projects and Follow me.\n
+         \nJust Trying to implement whatever I learn and make a tinny dent in the universe.</string>
 </resources>

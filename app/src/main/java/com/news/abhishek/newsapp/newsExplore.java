@@ -2,17 +2,12 @@ package com.news.abhishek.newsapp;
 
 import android.content.Intent;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import com.bumptech.glide.Glide;
 
 public class newsExplore extends AppCompatActivity {
 
@@ -28,8 +23,7 @@ public class newsExplore extends AppCompatActivity {
         String newsUrl = intent.getStringExtra("newsUrl");
 
 
-
-        WebView webview=findViewById(R.id.webView);
+        WebView webview = findViewById(R.id.webView);
         webview.loadUrl(newsUrl);
         webview.setWebViewClient(new WebViewClient() {
             //if app crash on before lolipop check this

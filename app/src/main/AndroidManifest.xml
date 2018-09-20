@@ -19,7 +19,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".newsExplore"></activity>
+        <activity android:name=".newsExplore" />
+        <activity
+            android:name=".about_dev"
+            android:theme="@style/aboutDev"></activity>
     </application>
 
 </manifest>

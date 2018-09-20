@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".SplashScreen">
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_centerInParent="true"
+        android:layout_above="@+id/logo_name"
+        android:layout_centerHorizontal="true"
         android:contentDescription="news Icon"
         android:src="@drawable/news_icon_abhi" />
 
@@ -17,28 +20,29 @@
         android:id="@+id/logo_name"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/logo"
-        android:layout_centerInParent="true"
+        android:layout_above="@+id/poweredBy"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-180px"
         android:contentDescription="Devloper"
         android:src="@drawable/abhishek" />
 
-    <TextView
+    <ImageView
         android:id="@+id/poweredBy"
-        android:layout_width="wrap_content"
+        android:layout_width="400px"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/logo_name"
-        android:layout_centerInParent="true"
-        android:text="supercharged by NewsAPI.org"
+        android:layout_above="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/newsapi"
         android:textColor="#FFAB40" />
 
-    <ImageView
-        android:layout_width="25dp"
-        android:layout_height="20dp"
 
-        android:layout_below="@+id/logo_name"
-        android:layout_centerInParent="true"
-        android:layout_toRightOf="@+id/poweredBy"
-        android:src="@drawable/heart" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="141dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-15px"
+        app:srcCompat="@drawable/city" />
 
 
 </RelativeLayout>

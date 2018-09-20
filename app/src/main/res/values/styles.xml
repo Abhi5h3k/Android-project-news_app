@@ -8,6 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="aboutDev" parent="AppTheme">
+        <item name="colorPrimaryDark">#1bbc9b</item>
+        <item name="colorPrimary">#1bbc9b</item>
+
+    </style>
 
     <style name="PrimaryFlatButton" parent="Theme.AppCompat.Light">
         <item name="android:buttonStyle">

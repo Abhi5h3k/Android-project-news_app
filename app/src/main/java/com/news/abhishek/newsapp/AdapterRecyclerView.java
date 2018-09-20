@@ -56,7 +56,7 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
             public void onClick(View v) {
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
-                String shareBody = "This news is shared using Abhishek News app :: " + "\n\n" + SplashScreen.newsList.get(position).getNewsUrl() + "\n\n Follw him on GitHub : Abhi5h3k";
+                String shareBody = "This news is shared using Abhishek News app :: " + "\n\n" + SplashScreen.newsList.get(position).getNewsUrl() + "\n\n Follw him on GitHub : https://github.com/Abhi5h3k";
                 sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
                 v.getContext().startActivity(Intent.createChooser(sharingIntent, "Share via"));
