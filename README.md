@@ -2,9 +2,8 @@
 
  [![Abhishek LinkedIn](https://img.shields.io/badge/Abhishek-LinkedIn-blue.svg?style=for-the-badge)](https://www.linkedin.com/in/abhishek-bhardwaj-b16764166) [![Abhishek StackOverflow](https://img.shields.io/badge/Abhishek-StackOverflow-orange.svg?style=for-the-badge)](https://stackoverflow.com/users/6870223/abhi?tab=profile)
 
-<div style="width:100%;height:0;padding-bottom:178%;position:relative;"><iframe src="https://giphy.com/embed/QN44TjVIvLzFYZ0gLz" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/QN44TjVIvLzFYZ0gLz">via GIPHY</a></p>
-  
-![news_app_demo_abhishek](https://giphy.com/embed/QN44TjVIvLzFYZ0gLz)
+
+![news_app_demo_abhishek](https://media.giphy.com/media/QN44TjVIvLzFYZ0gLz/giphy.gif)
 
 
 This is a News app  that uses [volley](https://github.com/google/volley), [glide](https://github.com/bumptech/glide) and powered by [News API](https://newsapi.org/)
