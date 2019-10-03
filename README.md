@@ -4,7 +4,7 @@
 
 
   
-![news_app_demo_abhishek](https://media.giphy.com/media/QN44TjVIvLzFYZ0gLz/giphy.gif)
+![news_app_demo_abhishek](https://giphy.com/embed/QN44TjVIvLzFYZ0gLz)
 
 
 This is a News app  that uses [volley](https://github.com/google/volley), [glide](https://github.com/bumptech/glide) and powered by [News API](https://newsapi.org/)
