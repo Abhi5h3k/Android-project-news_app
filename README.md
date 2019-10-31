@@ -4,9 +4,6 @@
 
 ![news app](https://media.giphy.com/media/STZuwscysQ2zBKSJjz/source.gif)
 
-
-[click to view demo](https://media.giphy.com/media/QN44TjVIvLzFYZ0gLz/giphy.gif)
-
 This is a News app  that uses [volley](https://github.com/google/volley), [glide](https://github.com/bumptech/glide) and powered by [News API](https://newsapi.org/)
 .Project is made using Android Studio.
 
